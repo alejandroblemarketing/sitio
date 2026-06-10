@@ -44,9 +44,7 @@
   .brand{
     font-family:var(--d);font-weight:800;letter-spacing:.04em;
     font-size:1.05rem;color:var(--cream);text-transform:uppercase;
-    display:flex;align-items:center;gap:11px;
   }
-  .brand img{width:32px;height:32px;display:block}
   .brand span{color:var(--amber)}
   .nav-links{display:flex;gap:28px;align-items:center}
   .nav-links a{
@@ -77,12 +75,6 @@
     background:radial-gradient(circle, rgba(242,192,120,.18), transparent 60%);
     pointer-events:none;filter:blur(10px);
   }
-  .hero-watermark{
-    position:absolute;top:50%;right:-6%;transform:translateY(-50%);
-    width:min(46vw,560px);opacity:.05;pointer-events:none;z-index:0;
-    animation:fadein-wm 1.6s 1.3s both;
-  }
-  @keyframes fadein-wm{from{opacity:0}to{opacity:.05}}
   .hero-eyebrow{
     font-family:var(--m);font-size:.78rem;letter-spacing:.32em;text-transform:uppercase;
     color:var(--amber);margin-bottom:28px;position:relative;z-index:1;
@@ -197,8 +189,7 @@
     content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;
     background:var(--amber);border:2px solid var(--cream-dim);
   }
-  .tl-when{font-family:var(--m);font-size:.76rem;letter-spacing:.1em;color:var(--navy);opacity:.7}
-  .tl-role{font-family:var(--d);font-weight:700;text-transform:uppercase;font-size:1.4rem;color:var(--navy);margin:6px 0 2px;line-height:1.05}
+  .tl-when{font-family:var(--m);font-size:.76rem;letter-spacing:.1em;color:var(--navy);opacity:.7;margin-bottom:10px}
   .tl-where{font-family:var(--b);font-style:italic;color:#46506a;margin-bottom:14px}
   .tl-list{list-style:none}
   .tl-list li{position:relative;padding:4px 0 4px 22px;font-size:1rem;color:#2a3344}
@@ -277,7 +268,7 @@
 <body>
 
 <nav id="nav">
-  <div class="brand"><img src="logo.png" alt="Alejandro Blé Marketing logo">Alejandro Blé <span>Marketing</span></div>
+  <div class="brand">Alejandro Blé <span>Marketing</span></div>
   <button class="nav-toggle" id="navToggle" aria-label="Open menu">☰</button>
   <div class="nav-links" id="navLinks">
     <a href="#about">About</a>
@@ -292,7 +283,6 @@
 <!-- HERO -->
 <header class="hero">
   <div class="spotlight"></div>
-  <img class="hero-watermark" src="logo.png" alt="" aria-hidden="true">
   <p class="hero-eyebrow">Consulting · Speaking · Training</p>
   <h1>
     <span class="ln">Alejandro Blé</span>
@@ -409,7 +399,6 @@
     <div class="timeline">
       <div class="tl-item reveal">
         <div class="tl-when">2017</div>
-        <div class="tl-role">Digital Marketing Manager</div>
         <ul class="tl-list">
           <li>Grew lead generation +35% nationwide in 12 months with a paid + organic strategy; improved ROAS 3.5x.</li>
           <li>Content management and brand governance for over 80 franchises, with +25% local engagement.</li>
@@ -420,18 +409,38 @@
       </div>
       <div class="tl-item reveal">
         <div class="tl-when">2016</div>
-        <div class="tl-role">Instructor · Digital &amp; International Marketing</div>
         <ul class="tl-list">
-          <li>Designed and delivered programs for over 100 entrepreneurs and master's-level students.</li>
-          <li>Integrated real cases and KPIs applicable to the business.</li>
+          <li>Taught International Marketing courses to master's-level students, promoting the analysis and application of strategies in real businesses.</li>
+          <li>Designed and moderated in-class debates to foster critical and collaborative understanding among students.</li>
+        </ul>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-when">2015</div>
+        <ul class="tl-list">
+          <li>Produced film essays, film reviews and film festivals (weekends).</li>
+        </ul>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-when">2014</div>
+        <ul class="tl-list">
+          <li>Master's-level Marketing professor for students from different fields.</li>
+          <li>Prepared and delivered undergraduate and graduate courses in traditional and digital marketing.</li>
+          <li>Assessed and implemented assignments and projects.</li>
+          <li>Initiated, facilitated and moderated in-class debates.</li>
         </ul>
       </div>
       <div class="tl-item reveal">
         <div class="tl-when">2012</div>
-        <div class="tl-role">Head of Digital Marketing Analytics</div>
         <ul class="tl-list">
-          <li>Managed social media for 27 brands, with +40% average engagement.</li>
-          <li>SEO and content campaigns that increased organic traffic +35%.</li>
+          <li>Managed social media strategies for 32 mass-consumer, restaurant and hospitality brands, boosting their positioning and average engagement by 40%, plus the execution of BTL campaigns.</li>
+          <li>Coordinated SEO campaigns that increased site visits by 35%.</li>
+        </ul>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-when">2011</div>
+        <ul class="tl-list">
+          <li>Coordinated branding, rebranding and brand-positioning projects for long-established brands.</li>
+          <li>Created media outreach strategies and supervised the design and redesign of stationery and websites.</li>
         </ul>
       </div>
     </div>
@@ -451,10 +460,15 @@
       </ul>
       <h3 style="margin-top:34px">Certifications</h3>
       <ul>
+        <li>AI Tools Specialization · Coursiv <span>2026</span></li>
+        <li>Facebook Blueprint <span>2025</span></li>
+        <li>YouTube Starter Kit · Think Media <span>2024</span></li>
+        <li>Social Media Playbook <span>2024</span></li>
         <li>Google Analytics <span>2023</span></li>
         <li>A.I. Agent Program <span>2023</span></li>
-        <li>Social Media Playbook <span>2024</span></li>
+        <li>Real Estate Seminar · ITAM <span>2022</span></li>
         <li>Audiovisual Production · Platzi <span>2022</span></li>
+        <li>Social Media Management · Katedra <span>2014</span></li>
       </ul>
     </div>
     <div class="cred-col reveal">
@@ -477,8 +491,6 @@
       <ul>
         <li>Spanish <span>Native</span></li>
         <li>English <span>C1 · Professional</span></li>
-        <li>French <span>B2</span></li>
-        <li>Italian <span>A2</span></li>
       </ul>
     </div>
   </div>

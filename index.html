@@ -44,9 +44,7 @@
   .brand{
     font-family:var(--d);font-weight:800;letter-spacing:.04em;
     font-size:1.05rem;color:var(--cream);text-transform:uppercase;
-    display:flex;align-items:center;gap:11px;
   }
-  .brand img{width:32px;height:32px;display:block}
   .brand span{color:var(--amber)}
   .nav-links{display:flex;gap:28px;align-items:center}
   .nav-links a{
@@ -77,12 +75,6 @@
     background:radial-gradient(circle, rgba(242,192,120,.18), transparent 60%);
     pointer-events:none;filter:blur(10px);
   }
-  .hero-watermark{
-    position:absolute;top:50%;right:-6%;transform:translateY(-50%);
-    width:min(46vw,560px);opacity:.05;pointer-events:none;z-index:0;
-    animation:fadein-wm 1.6s 1.3s both;
-  }
-  @keyframes fadein-wm{from{opacity:0}to{opacity:.05}}
   .hero-eyebrow{
     font-family:var(--m);font-size:.78rem;letter-spacing:.32em;text-transform:uppercase;
     color:var(--amber);margin-bottom:28px;position:relative;z-index:1;
@@ -197,8 +189,7 @@
     content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;
     background:var(--amber);border:2px solid var(--cream-dim);
   }
-  .tl-when{font-family:var(--m);font-size:.76rem;letter-spacing:.1em;color:var(--navy);opacity:.7}
-  .tl-role{font-family:var(--d);font-weight:700;text-transform:uppercase;font-size:1.4rem;color:var(--navy);margin:6px 0 2px;line-height:1.05}
+  .tl-when{font-family:var(--m);font-size:.76rem;letter-spacing:.1em;color:var(--navy);opacity:.7;margin-bottom:10px}
   .tl-where{font-family:var(--b);font-style:italic;color:#46506a;margin-bottom:14px}
   .tl-list{list-style:none}
   .tl-list li{position:relative;padding:4px 0 4px 22px;font-size:1rem;color:#2a3344}
@@ -277,7 +268,7 @@
 <body>
 
 <nav id="nav">
-  <div class="brand"><img src="logo.png" alt="Logo Alejandro Blé Marketing">Alejandro Blé <span>Marketing</span></div>
+  <div class="brand">Alejandro Blé <span>Marketing</span></div>
   <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">☰</button>
   <div class="nav-links" id="navLinks">
     <a href="#about">Sobre mí</a>
@@ -292,7 +283,6 @@
 <!-- HERO -->
 <header class="hero">
   <div class="spotlight"></div>
-  <img class="hero-watermark" src="logo.png" alt="" aria-hidden="true">
   <p class="hero-eyebrow">Consultoría · Conferencias · Capacitación</p>
   <h1>
     <span class="ln">Alejandro Blé</span>
@@ -409,7 +399,6 @@
     <div class="timeline">
       <div class="tl-item reveal">
         <div class="tl-when">2017</div>
-        <div class="tl-role">Gerente de Marketing Digital</div>
         <ul class="tl-list">
           <li>Incrementé la generación de leads +35% a nivel nacional en 12 meses con estrategia de paid + organic; ROAS mejorado 3.5x.</li>
           <li>Gestión de contenidos y gobernanza de marca para más de 80 franquicias, con +25% de engagement local.</li>
@@ -420,18 +409,38 @@
       </div>
       <div class="tl-item reveal">
         <div class="tl-when">2016</div>
-        <div class="tl-role">Docente · Marketing Digital e Internacional</div>
         <ul class="tl-list">
-          <li>Diseño e impartición de programas para más de 100 emprendedores y nivel maestría.</li>
-          <li>Integración de casos reales y KPIs aplicables al negocio.</li>
+          <li>Impartí cursos de Marketing Internacional para estudiantes de maestría, promoviendo el análisis y aplicación de estrategias en negocios reales.</li>
+          <li>Diseñé y moderé debates en el aula para fomentar la comprensión crítica y colaborativa entre los estudiantes.</li>
+        </ul>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-when">2015</div>
+        <ul class="tl-list">
+          <li>Realización de ensayos cinematográficos, críticas cinematográficas y festivales de cine (fines de semana).</li>
+        </ul>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-when">2014</div>
+        <ul class="tl-list">
+          <li>Profesor de grado maestría en Marketing para estudiantes de distintas áreas.</li>
+          <li>Preparar e impartir cursos de licenciatura y postgrado en temas de mercadotecnia tradicional y digital.</li>
+          <li>Evaluar y poner en práctica tareas y trabajos.</li>
+          <li>Iniciar, facilitar y moderar los debates en el salón de clases.</li>
         </ul>
       </div>
       <div class="tl-item reveal">
         <div class="tl-when">2012</div>
-        <div class="tl-role">Jefe de Análisis de Marketing Digital</div>
         <ul class="tl-list">
-          <li>Gestión de social media para 27 marcas, con +40% de engagement promedio.</li>
-          <li>Campañas de SEO y contenido que aumentaron el tráfico orgánico +35%.</li>
+          <li>Gestioné estrategias de redes sociales para 32 marcas de consumo masivo, restaurantero y hotelero, incrementando su posicionamiento y engagement promedio en un 40%, así como en la ejecución de campañas BTL.</li>
+          <li>Coordiné campañas de SEO que incrementaron en un 35% las visitas a su sitio.</li>
+        </ul>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-when">2011</div>
+        <ul class="tl-list">
+          <li>Coordinar proyectos de branding, rebranding y posicionamiento de marca para marcas con mucho tiempo en el mercado.</li>
+          <li>Crear estrategias de difusión en medios y supervisar el diseño y rediseño de papelería y páginas web.</li>
         </ul>
       </div>
     </div>
@@ -451,10 +460,15 @@
       </ul>
       <h3 style="margin-top:34px">Certificaciones</h3>
       <ul>
+        <li>Especialización en Herramientas de IA · Coursiv <span>2026</span></li>
+        <li>Facebook Blueprint <span>2025</span></li>
+        <li>Youtube Starter Kit · Think Media <span>2024</span></li>
+        <li>Social Media Playbook <span>2024</span></li>
         <li>Google Analytics <span>2023</span></li>
         <li>A.I. Agent Program <span>2023</span></li>
-        <li>Social Media Playbook <span>2024</span></li>
+        <li>Seminario Inmobiliario · ITAM <span>2022</span></li>
         <li>Producción Audiovisual · Platzi <span>2022</span></li>
+        <li>Social Media Management · Katedra <span>2014</span></li>
       </ul>
     </div>
     <div class="cred-col reveal">
@@ -477,8 +491,6 @@
       <ul>
         <li>Español <span>Nativo</span></li>
         <li>Inglés <span>C1 · Profesional</span></li>
-        <li>Francés <span>B2</span></li>
-        <li>Italiano <span>A2</span></li>
       </ul>
     </div>
   </div>
